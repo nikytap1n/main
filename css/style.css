@@ -8,10 +8,13 @@
 
 body {
     font-family: Lemon;
-    background: rgba(26,24,24,.966);
+    background-image: url('background.png');
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-attachment: fixed; /* Make the background fixed */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
     margin: 0 auto
 }
-
 div.container {
     background: #1a1818;
     transform: perspective(1000px) rotateX(4deg) rotateY(-16deg) rotateZ(4deg);
