@@ -90,15 +90,28 @@ section {
 }
 
 .home {
+    position: relative; /* Make sure the container is positioned relatively */
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px; /* Adjust if you want some space between content and image */
+    padding: 0 2rem; /* Optional: Add horizontal padding if needed */
 }
 
-.home-img img {
-    width: 19vw;
-    animation: floatImage 5s ease-in-out infinite;
+.home-content {
+    z-index: 1; /* Ensure content is above the image */
+    margin-right: 30vw; /* Adjust to create space for the image */
 }
+
+.home-img {
+    position: absolute; /* Position the image absolutely */
+    bottom: 10%; /* Adjust as needed */
+    right: 10%; /* Adjust as needed */
+    width: 35vw; /* Keep the width as 35vw */
+    transform: scale(0.8); /* Scale down the image */
+    z-index: 0; /* Ensure image is below the content */
+}
+
 
 @keyframes floatImage {
     0% {
