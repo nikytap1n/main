@@ -1,20 +1,54 @@
-<!DOCTYPE html><html lang="en">
-               <head>
-                   <meta charset="UTF-8">
-                   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-                   <title>nikymetaa pro</title>
-                   <link href="css/boxicons.min.css" rel="stylesheet">
-                   <link rel="stylesheet" type="text/css" href="css/style.css">
-                   <style type="text/css">
-                       body {
-                           background-image: url('discord.png');
-                       }
-                   </style>
-                   <!-- Add the following line to set the favicon -->
-                   <link rel="icon" type="image/x-icon" href="images/pfp.gif">
-                   <meta name="description" content="niky pro website">
-               </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=0.8">
+    <title>🧑‍💻</title>
+    <link href="css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Add the following line to set the favicon -->
+    <link rel="icon" type="image/x-icon" href="images/pfp.gif">
+    <meta name="description" content="nikymetaa's portfolio">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const titleElement = document.querySelector('title');
+            const text = 'nikymetaa';
+            let index = 0;
+            let typingSpeed = 150; // Adjust typing speed here
+            let eraseSpeed = 100; // Adjust erasing speed here
+            let delay = 1000; // Delay before restarting typing
+
+            function type() {
+                if (index < text.length) {
+                    titleElement.textContent += text.charAt(index);
+                    index++;
+                    setTimeout(type, typingSpeed);
+                } else {
+                    setTimeout(erase, delay);
+                }
+            }
+
+            function erase() {
+                if (index > 0) {
+                    titleElement.textContent = text.substring(0, index - 1);
+                    index--;
+                    setTimeout(erase, eraseSpeed);
+                } else {
+                    clearHash();
+                    setTimeout(type, delay);
+                }
+            }
+
+            function clearHash() {
+                // Update the URL to remove hash fragments
+                history.replaceState(null, null, location.pathname);
+            }
+
+            type();
+        });
+    </script>
+</head>
 <body>
   <!--body-->
   <header class="header">
@@ -24,30 +58,25 @@
       <a href="#home" class="active">Home</a>
       <a href="#about">ABOUT</a>
       <a href="#services">SERVICES</a>
-      <a href="#portfolio">SOCIAL</a>
+      <a href="#portfolio">TOOLS</a>
       <!-- Removed the contact link -->
     </nav>
   </header>
   <section class="home" id="home">
-      <style type="text/css">
-          body {
-              background-image: url('discord.png');
-          }
-      </style>
-      <div class="home-content">
-          <h3>Hello, It's Me</h3>
-          <h1>nikymetaa</h1>
-          <h3>And I'm a <span class="m-text"></span></h3>
-          <div class="social-media">
-              <a href="https://github.com/nikyy2"><i class="bx bxl-github"></i></a>
-              <a href="https://discord.gg/J7AjDFYA5m"><i class="bx bxl-discord"></i></a>
-              <a href="https://www.youtube.com/@nikyisme?sub_confirmation=1"><i class="bx bxl-youtube"></i></a>
-          </div>
-          <a href="images/pfp.gif" class="btn">Download pfp</a>
+    <div class="home-content">
+      <h3>Hello, It's Me</h3>
+      <h1>NikyOfficial</h1>
+      <h3>And I'm a <span class="m-text"></span></h3>
+      <div class="social-media">
+        <a href="https://github.com/nikyy2"><i class="bx bxl-github"></i></a>
+        <a href="https://discord.gg/J7AjDFYA5m"><i class="bx bxl-discord"></i></a>
+        <a href="https://www.youtube.com/@nikyisme?sub_confirmation=1"><i class="bx bxl-youtube"></i></a>
       </div>
-      <div class="home-img">
-          <img src="images/pfp.gif" alt="">
-      </div>
+      <a href="images/pfp.gif" class="btn">Download pfp</a>
+    </div>
+    <div class="home-img">
+      <img src="images/pfp.gif" alt="">
+    </div>
   </section>
   <section class="about" id="about">
     <div class="about-img">
@@ -56,87 +85,67 @@
     <div class="about-content">
       <h2 class="heading">About<span>Me</span></h2>
       <h3>Web Developer</h3>
-          <p>
-              Web developer with experience building single-page web applications and a knack for creating attractive user
-              interfaces. Skilled experience in Python, JavaScript, HTML, CSS, PHP, and Bootstrap.
-          </p>
-          <a href="https://discord.gg/J7AjDFYA5m" class="btn">Contact Me</a>
-      </div>
+      <p>Web developer with experience building single-page web applications and a knack for creating attractive user
+        interfaces. Skilled experience in Python, JavaScript, HTML, CSS, PHP, and Bootstrap.</p>
+      <a href="https://discord.gg/J7AjDFYA5m" class="btn">Contact Me</a>
+    </div>
   </section>
   <section class="services" id="services">
-      <style type="text/css">
-          body {
-              background-image: url('discord.png');
-          }
-      </style>
-      <h2 class="heading">Our<span>Services</span></h2>
-      <div class="services-container">
-          <div class="services-box">
-              <i class="bx bx-code-alt"></i>
-              <h3>Web Development</h3>
-              <p>
-                  Motivated designer and developer with experience creating custom websites through PHP and CSS. Strong
-                  collaboration skills and proven history of application development. DHTML and JavaScript. MS Access and MySQL.
-              </p>
-              <a href="#" class="btn">:)</a>
-          </div>
-
-          <div class="services-box">
-              <i class="bx bx-crop"></i>
-              <h3>UI/UX Design</h3>
-              <p>You cannot make a good design if you do not understand people; design is made for people.</p>
-              <a href="#" class="btn">:3</a>
-          </div>
-
-          <div class="services-box">
-              <i class="bx bxl-instagram-alt"></i>
-              <h3>App Design</h3>
-              <p>
-                  I'm a UI/UX Designer with a great passion for my work. The main goal is to create modern, attractive, and
-                  user-friendly interfaces and find creative and simple solutions for your business.
-              </p>
-              <a href="#" class="btn">♡</a>
-          </div>
+    <h2 class="heading">Our<span>Services</span></h2>
+    <div class="services-container">
+      <div class="services-box">
+        <i class="bx bx-code-alt"></i>
+        <h3>Web Development</h3>
+        <p>Motivated designer and developer with experience creating custom websites through PHP and CSS. Strong
+          collaboration skills and proven history of application development. DHTML and JavaScript. MS Access and MySQL.
+        </p>
+        <a href="#" class="btn">:)</a>
       </div>
+
+      <div class="services-box">
+        <i class="bx bx-crop"></i>
+        <h3>UI/UX Design</h3>
+        <p>You cannot make a good design if you do not understand people; design is made for people.</p>
+        <a href="#" class="btn">:3</a>
+      </div>
+
+      <div class="services-box">
+        <i class="bx bxl-instagram-alt"></i>
+        <h3>App Design</h3>
+        <p>I'm a UI/UX Designer with a great passion for my work. The main goal is to create modern, attractive, and
+          user-friendly interfaces and find creative and simple solutions for your business.</p>
+        <a href="#" class="btn">♡</a>
+      </div>
+    </div>
   </section>
   <section class="portfolio" id="portfolio">
-      <style type="text/css">
-          body {
-              background-image: url('discord.png');
-          }
-      </style>
-      <h2 class="heading">SOCIAL<span>MEDIA</span></h2>
-      <style type="text/css">
-          body {
-              background-image: url('discord.png');
-          }
-      </style>
-      <div class="portfolio-container">
-          <div class="portfolio-box">
-              <img src="images/discord-logo-discord-icon-transparent-free-png.webp" alt="">
-              <div class="portfolio-layer">
-                  <h4>My Discord Server 10k+</h4>
-                  <p>just my discord server.</p>
-                  <a href="https://discord.gg/J7AjDFYA5m"><i class="bx bx-link-external"></i></a>
-              </div>
-          </div>
-          <div class="portfolio-box">
-              <img src="images/github.png" alt="">
-              <div class="portfolio-layer">
-                  <h4>Sources</h4>
-                  <p>my Github.</p>
-                  <a href="https://github.com/nikyy2"><i class="bx bx-link-external"></i></a>
-              </div>
-          </div>
-          <div class="portfolio-box">
-              <img src="images/yt.jpg" alt="">
-              <div class="portfolio-layer">
-                  <h4>nikyofficial</h4>
-                  <p>my Youtube Channel.</p>
-                  <a href="https://www.youtube.com/@nikyisme?sub_confirmation=1"><i class="bx bx-link-external"></i></a>
-              </div>
-          </div>
+    <h2 class="heading">MY<span>PROJECTS</span></h2>
+    <div class="portfolio-container">
+      <div class="portfolio-box">
+        <img src="images/codeeditor.png" alt="">
+        <div class="portfolio-layer">
+          <h4 class="whitetext">Code Editor (PYTHON)</h4>
+          <p class="whitetext">edit python script online.</p>
+          <a href="https://nikywelcome.is-a.dev"><i class="bx bx-link-external"></i></a>
+        </div>
       </div>
+      <div class="portfolio-box">
+        <img src="images/slinkycrack.png" alt="">
+        <div class="portfolio-layer">
+          <h4 class="whitetext">Slinky.gg</h4>
+          <p class="whitetext">cracked dlls.</p>
+          <a href="https://github.com/nikyy2/slinky-cracked"><i class="bx bx-link-external"></i></a>
+        </div>
+      </div>
+      <div class="portfolio-box">
+        <img src="images/hyperion.gif" alt="">
+        <div class="portfolio-layer">
+          <h4 class="whitetext">NIKYMETAA exec</h4>
+          <p class="whitetext">a roblox executor.</p>
+          <a href="https://github.com/nikyy2/NIKYMETAA-Exec"><i class="bx bx-link-external"></i></a>
+        </div>
+      </div>
+    </div>
   </section>
 
   <footer class="footer">
@@ -151,6 +160,3 @@
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="js/script.js"></script>
-
-
-</body></html>
